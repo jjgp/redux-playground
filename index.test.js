@@ -1,5 +1,12 @@
-const sum = require('./index');
+const configureStore = require('./index');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('PING PONG', done => {
+  const store = configureStore();
+  let count = 0;
+  store.subscribe(() => {
+    console.log(store.getState());
+    count++;
+    count > 1 && done();
+  });
+  store.dispatch({ type: 'PING' });
 });

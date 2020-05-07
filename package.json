@@ -10,7 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "redux": "^4.0.5",
-    "redux-observable": "^1.2.0"
+    "redux-observable": "^1.2.0",
+    "rxjs": "^6.5.5"
   },
   "devDependencies": {
     "jest": "^26.0.1"
